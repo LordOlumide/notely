@@ -42,7 +42,8 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              const YMargin(45),
+              const YMargin(48),
+
               Expanded(
                 child: PageView.builder(
                   onPageChanged: (pageIndex) {

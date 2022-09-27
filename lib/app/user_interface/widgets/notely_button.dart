@@ -18,7 +18,7 @@ class NotelyButton extends StatelessWidget {
     return SizedBox(
       width: size.width,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 24),
           shape: RoundedRectangleBorder(
