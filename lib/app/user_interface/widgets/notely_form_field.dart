@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:notely/rsc/utils/margins/y_margin.dart';
 
 class NotelyFormField extends StatefulWidget {
+  final TextEditingController controller;
   final String label;
   final String hint;
 
   const NotelyFormField({
     Key? key,
+    required this.controller,
     required this.label,
     required this.hint,
   }) : super(key: key);
@@ -14,6 +16,14 @@ class NotelyFormField extends StatefulWidget {
   @override
   State<NotelyFormField> createState() => _NotelyFormFieldState();
 }
+
+final _border = OutlineInputBorder(
+  borderSide: const BorderSide(
+    color: Color(0xFFf2e5d5),
+    width: 1,
+  ),
+  borderRadius: BorderRadius.circular(12),
+);
 
 class _NotelyFormFieldState extends State<NotelyFormField> {
   @override
@@ -31,6 +41,7 @@ class _NotelyFormFieldState extends State<NotelyFormField> {
         ),
         const YMargin(8),
         TextFormField(
+          controller: widget.controller,
           decoration: InputDecoration(
             filled: true,
             fillColor: const Color(0xFFfffdfa),
