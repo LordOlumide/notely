@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:notely/app/user_interface/widgets/notely_button.dart';
 import 'package:notely/rsc/utils/margins/y_margin.dart';
 import '../screens/create_a_note_screen.dart';
