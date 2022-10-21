@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:notely/rsc/utils/margins/y_margin.dart';
 
 class NotelyFormField extends StatefulWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String label;
   final String hint;
 
   const NotelyFormField({
     Key? key,
-    required this.controller,
+    this.controller,
     required this.label,
     required this.hint,
   }) : super(key: key);
@@ -46,13 +46,11 @@ class _NotelyFormFieldState extends State<NotelyFormField> {
             filled: true,
             fillColor: const Color(0xFFfffdfa),
             hintText: widget.hint,
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: const BorderSide(
-                color: Color(0xFFf2e5d5),
-                width: 1,
-              ),
-            ),
+            enabledBorder: _border,
+            errorBorder: _border,
+            disabledBorder: _border,
+            border: _border,
+            focusedBorder: _border,
           ),
         ),
       ],

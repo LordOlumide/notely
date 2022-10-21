@@ -60,59 +60,61 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               children: [
                 const YMargin(16),
                 Expanded(
-                  child: Column(
-                    children: [
-                      const Center(
-                        child: Text(
-                          'Notely',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Color(0xFF403B36),
-                            fontFamily: 'Titan One',
-                            fontWeight: FontWeight.w400,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const Center(
+                          child: Text(
+                            'Notely',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF403B36),
+                              fontFamily: 'Titan One',
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
-                      ),
-                      const YMargin(50),
-                      const Text(
-                        'Create a free account',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w900,
-                          color: Color(0xFF403b36),
+                        const YMargin(50),
+                        const Text(
+                          'Create a free account',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w900,
+                            color: Color(0xFF403b36),
+                          ),
                         ),
-                      ),
-                      const YMargin(5),
-                      const Text(
-                        'Join Notely for free. Create and share unlimited '
-                        'notes with your friends.',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF595550),
+                        const YMargin(5),
+                        const Text(
+                          'Join Notely for free. Create and share unlimited '
+                          'notes with your friends.',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF595550),
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const YMargin(30),
-                      NotelyFormField(
-                        controller: _fullNameController,
-                        label: 'Full Name',
-                        hint: 'Olumide Olubosede',
-                      ),
-                      const YMargin(21),
-                      NotelyFormField(
-                        controller: _emailController,
-                        label: 'Email Address',
-                        hint: 'olumideolubosede@yahoo.com',
-                      ),
-                      const YMargin(21),
-                      NotelyFormField(
-                        controller: _passwordController,
-                        label: 'Password',
-                        hint: '############',
-                      ),
-                      const YMargin(21),
-                    ],
+                        const YMargin(30),
+                        NotelyFormField(
+                          controller: _fullNameController,
+                          label: 'Full Name',
+                          hint: 'Olumide Olubosede',
+                        ),
+                        const YMargin(21),
+                        NotelyFormField(
+                          controller: _emailController,
+                          label: 'Email Address',
+                          hint: 'olumideolubosede@yahoo.com',
+                        ),
+                        const YMargin(21),
+                        NotelyFormField(
+                          controller: _passwordController,
+                          label: 'Password',
+                          hint: '############',
+                        ),
+                        const YMargin(21),
+                      ],
+                    ),
                   ),
                 ),
                 BlocBuilder<SignupCubit, SignupState>(
